@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -26,7 +27,7 @@ namespace RestaurantRater.Controllers
          //POST: Restaurant/Create
          [HttpPost]
          [ValidateAntiForgeryToken]
-         public ActionResult Create([Bind(Include = "RestaurantId,Name")] Restaurant restaurant)
+         public ActionResult Create([Bind(Include = "RestaurantId,Name,Address,Rating")] Restaurant restaurant)
         {
             if (ModelState.IsValid)
             {
@@ -36,6 +37,39 @@ namespace RestaurantRater.Controllers
             }
 
             return View(restaurant);
+        }
+        // GET: Restaurant/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Restaurant restaurant = db.Restaurants.Find(id);
+            if (restaurant == null)
+            {
+                return HttpNotFound();
+            }
+            return View(restaurant);
+        }
+        //POST: Restaurant/Delet/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfiremen(int id)
+        {
+            Restaurant restaurant = db.Restaurants.Find(id);
+            db.Restaurants.Remove(restaurant);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
 
