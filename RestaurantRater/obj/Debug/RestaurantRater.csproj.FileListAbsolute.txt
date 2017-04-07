@@ -65,3 +65,7 @@ c:\users\melody\documents\visual studio 2017\Projects\RestaurantRater\Restaurant
 c:\users\melody\documents\visual studio 2017\Projects\RestaurantRater\RestaurantRater\obj\Debug\RestaurantRater.csprojResolveAssemblyReference.cache
 c:\users\melody\documents\visual studio 2017\Projects\RestaurantRater\RestaurantRater\obj\Debug\RestaurantRater.dll
 c:\users\melody\documents\visual studio 2017\Projects\RestaurantRater\RestaurantRater\obj\Debug\RestaurantRater.pdb
+C:\Users\Melody\Documents\Visual Studio 2017\Projects\RestaurantRater\RestaurantRater\bin\EntityFramework.dll
+C:\Users\Melody\Documents\Visual Studio 2017\Projects\RestaurantRater\RestaurantRater\bin\EntityFramework.SqlServer.dll
+C:\Users\Melody\Documents\Visual Studio 2017\Projects\RestaurantRater\RestaurantRater\bin\EntityFramework.xml
+C:\Users\Melody\Documents\Visual Studio 2017\Projects\RestaurantRater\RestaurantRater\bin\EntityFramework.SqlServer.xml
